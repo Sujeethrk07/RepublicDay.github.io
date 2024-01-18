@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#india-map {
+  background-image: url('india-map.svg'); /* Replace with your India map SVG */
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+.flag {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  background-color: #ff9933; /* Saffron color */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 33%, 0% 33%);
+  animation: wave 2s infinite alternate;
+}
+
+.flag.white {
+  top: 33%;
+  background-color: #ffffff; /* White color */
+}
+
+.flag.green {
+  top: 66%;
+  background-color: #138808; /* Green color */
+}
+
+@keyframes wave {
+  to {
+    transform: translateY(10px);
+  }
+}
